@@ -1,13 +1,13 @@
 
+import { RouterProvider } from 'react-router-dom';
 import './App.css';
-import Footer from './Shared/Footer';
-import Header from './Shared/Header';
+import router from './Router/Route';
+
 
 function App() {
   return (
    <>
-   <Header></Header>
-   <Footer/>
+   <RouterProvider router={router}></RouterProvider>
    </>
   );
 }
