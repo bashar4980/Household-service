@@ -1,0 +1,154 @@
+[
+    {
+      
+        "title": "Plumbing Service",
+        "img": "https://i.ibb.co/KqN8K3k/Residential-Plumbing-Service.jpg",
+        "price": "500",
+        "description": "Our expert plumbers are always available to handle any residential plumbing issue—inside or outside your home or business. Whether it’s repairing an annoying drip, drain cleaning for an uncooperative drain, or providing a hot water heater repair, we’ll get it done fast, and we’ll do it right the first time.",
+        "facility": [
+            {
+                "name": "Instant Services"
+                
+            },
+            {
+                "name": "24/7 Quality Service"
+               
+            },
+            {
+                "name": "Easy Customer Service"
+               
+            },
+            {
+                "name": "Quality Cost Service"
+              
+            }
+        ]
+    },
+    {
+  
+        "title": "Home Painting",
+        "img": "https://i.ibb.co/GdgK9MJ/interior-house-painting-services.jpg",
+        "price": "5000",
+        "description": "I am provide the best House painting service in Bangladesh.MAX Enterprise has 12-year experience in the House painting service work field. I am always try to provide my best. When I receive a project from the Client, then I think about this project. Our service 24/7 OPENED. ",
+        "facility": [
+            {
+                "name": "Instant Services"
+                
+            },
+            {
+                "name": "24/7 Quality Service"
+               
+            },
+            {
+                "name": "Easy Customer Service"
+               
+            },
+            {
+                "name": "Quality Cost Service"
+              
+            }
+        ]
+    },
+    {
+      
+    
+        "title": "Electrician Service",
+        "img": "https://i.ibb.co/BT73XW0/Different-Types-of-Electrical-Services-Available.jpg",
+        "price": "1000",
+        "description": "Looking for the best electrical service at home near you?Household service has trusted & skilled electricians in Bangladesh. Satisfaction guaranteed. Book Now.",
+        "facility": [
+            {
+                "name": "Instant Services"
+                
+            },
+            {
+                "name": "24/7 Quality Service"
+               
+            },
+            {
+                "name": "Easy Customer Service"
+               
+            },
+            {
+                "name": "Quality Cost Service"
+              
+            }
+        ]
+    },
+    {
+      
+   
+        "title": "Cleaning service",
+        "img": "https://i.ibb.co/p4GFGH0/images.jpg",
+        "price": "750",
+        "description": "Looking for the best cleaning service at home near you?Household service has trusted for your work. Satisfaction guaranteed. Book Now. We also provide water tank cleaning service bd, Overhead tank cleaning services bd, Reserve tank cleaning service bd, Conceal pipe cleaning, Service pipe cleaning, Perking tiles cleaning, Fare face cleaning. Also, we provide septic tank cleaning services",
+        "facility": [
+            {
+                "name": "Instant Services"
+                
+            },
+            {
+                "name": "24/7 Quality Service"
+               
+            },
+            {
+                "name": "Easy Customer Service"
+               
+            },
+            {
+                "name": "Quality Cost Service"
+              
+            }
+        ]
+    },
+    {
+       
+        "title": "Heating and Cooling service",
+        "img": "https://i.ibb.co/z2ZxMJm/Why-Heating-and-AC-Should-Be-Left-to-a-Professional-Fort-Worth-TX-1024x600.jpg",
+        "price": "30.00",
+        "description": "Looking for the best Heating and Cooling service at home near you?Household service has provide this service and it is  trusted for your work. Satisfaction guaranteed. Book Now. I can provide any problem solution for your Air condition problem.",
+        "facility": [
+            {
+                "name": "Instant Services"
+                
+            },
+            {
+                "name": "24/7 Quality Service"
+               
+            },
+            {
+                "name": "Easy Customer Service"
+               
+            },
+            {
+                "name": "Quality Cost Service"
+              
+            }
+        ]
+    },
+    {
+      
+        "title": "Locksmith Services",
+        "img": "https://i.ibb.co/5TncMt3/i-Stock-623530148-res.jpg",
+        "price": "500",
+        "description": "Household.service provide locksmith service for your home.we provide services include emergency call outs, key cutting, changing locks, repairs to auto locksmiths helping with lost car keys & replacement keys",
+        "facility": [
+            {
+                "name": "Instant Services"
+                
+            },
+            {
+                "name": "24/7 Quality Service"
+               
+            },
+            {
+                "name": "Easy Customer Service"
+               
+            },
+            {
+                "name": "Quality Cost Service"
+              
+            }
+        ]
+    }
+]
