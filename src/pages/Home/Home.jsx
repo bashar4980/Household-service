@@ -18,6 +18,7 @@ const Home = () => {
                         serviceData.map(service =>{
                             return(
                                 <Service service={service} key={service._id}></Service>
+                               
                             )
                         })
                     }
