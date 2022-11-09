@@ -7,9 +7,12 @@ import Authprovider from './Context/Authprovider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Authprovider>
-    <App/>
-  </Authprovider>
+ <>
+ <Authprovider>
+  <App></App>
+ </Authprovider>
+
+ </>
 );
 
 // If you want to start measuring performance in your app, pass a function
