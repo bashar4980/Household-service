@@ -1,6 +1,11 @@
 import React from 'react';
 
 const Signup = () => {
+	
+	const submitHandeler =(event)=>{
+          event.preventDefault();
+		  const form = event.target;
+	}
     return (
         <div className='container mx-auto py-10'>
             <div className="w-3/4 mx-auto max-w-md p-4 rounded-md shadow sm:p-8   bg-gray-900   text-gray-100">
@@ -30,7 +35,7 @@ const Signup = () => {
 		<p className="px-3   text-gray-400">OR</p>
 		<hr className="w-full   text-gray-400"/>
 	</div>
-	<form novalidate="" action="" className="space-y-8 ng-untouched ng-pristine ng-valid">
+	<form onSubmit={submitHandeler} novalidate="" action="" className="space-y-8 ng-untouched ng-pristine ng-valid">
 		<div className="space-y-4">
         <div className="space-y-2">
 				<label for="name" className="block text-sm">User Name:</label>
