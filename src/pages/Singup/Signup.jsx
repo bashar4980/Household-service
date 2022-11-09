@@ -5,7 +5,7 @@ import { AuthContext } from '../../Context/Authprovider';
 
 const Signup = () => {
 
-    const {providerLogin, createUser} = useContext(AuthContext)
+    const {providerLogin, createUser , updateUser} = useContext(AuthContext)
 	const provider = new GoogleAuthProvider();
 	const gitHubProvider = new GithubAuthProvider();
 	//form handeler
@@ -27,6 +27,8 @@ const Signup = () => {
 		  .then((result)=>{
 			const user = result.user;
 			console.log(user);
+			form.reset()
+			updateUserInformation(name,picture)
 		  })
 		  .catch(error => console.log(error))
 
@@ -34,6 +36,15 @@ const Signup = () => {
 		
 
 	}
+	//update user information
+    const updateUserInformation = (name , picture) =>{
+		const profile = {
+			displayName: name,
+			photoURL: picture
+		}
+		updateUser(profile)
+	}
+	//end 
   //sign up with google
   const googleHandeler = ()=>{
 	providerLogin(provider)
