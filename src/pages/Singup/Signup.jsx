@@ -5,10 +5,10 @@ import { AuthContext } from '../../Context/Authprovider';
 
 const Signup = () => {
 
-    const {providerLogin} = useContext(AuthContext)
+    const {providerLogin, createUser} = useContext(AuthContext)
 	const provider = new GoogleAuthProvider();
 	const gitHubProvider = new GithubAuthProvider();
-	
+	//form handeler
 	const submitHandeler =(event)=>{
           event.preventDefault();
 		  const form = event.target;
@@ -23,6 +23,13 @@ const Signup = () => {
 			picture
 		  }
 		  console.log(userInfo);
+		  createUser(email,password)
+		  .then((result)=>{
+			const user = result.user;
+			console.log(user);
+		  })
+		  .catch(error => console.log(error))
+
 
 		
 
