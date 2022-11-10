@@ -14,16 +14,19 @@ const auth = getAuth(app);
 const Authprovider = ({ children }) => {
 
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   
   //create user by provider
   const providerLogin = (provider) => {
+    setLoading(true);
     return signInWithPopup(auth , provider);
   };
 
   //end
   //create user by email
   const createUser =(email , password) =>{
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password)
   }
 
@@ -31,11 +34,13 @@ const Authprovider = ({ children }) => {
   //end
   //update user corrent information
  const updateUser = (profile)=>{
+  setLoading(true);
    return updateProfile(auth.currentUser , profile)
  }
   
  //login user
  const userLogin = (email , password)=>{
+  setLoading(true);
   return  signInWithEmailAndPassword(auth , email, password)
  }
 
@@ -53,7 +58,8 @@ const Authprovider = ({ children }) => {
 useEffect(()=>{
    const unsubscribe = onAuthStateChanged(auth , currentuser =>{
     setUser(currentuser)
-    console.log(currentuser)
+  
+    setLoading(false);
    })
    return ()=>{
     unsubscribe()
@@ -67,7 +73,7 @@ useEffect(()=>{
     createUser,
     updateUser,
     userLogin,
-    logOut
+    logOut,loading
   };
 
   return (
