@@ -48,9 +48,8 @@ const Header = () => {
       About
     </Navbar.Link>
    <Link to="/services">Services</Link>
-    <Navbar.Link href="/navbars">
-      Pricing
-    </Navbar.Link>
+   <Link to="/blogs">Blogs</Link>
+    
     {
       user?.uid && <>
       <Link to="/myreviews">My Reviews</Link> 
