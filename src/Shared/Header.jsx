@@ -51,9 +51,13 @@ const Header = () => {
     <Navbar.Link href="/navbars">
       Pricing
     </Navbar.Link>
-    <Navbar.Link href="/navbars">
-      Contact
-    </Navbar.Link>
+    {
+      user?.uid && <>
+      <Link to="/myreviews">My Reviews</Link> 
+      <Link to="/addservice">Add Service</Link> 
+      </>
+    
+    }
   </Navbar.Collapse>
 </Navbar>
     );
