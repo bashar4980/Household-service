@@ -1,11 +1,32 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
-import Review from "./Review";
+import Review from "./AddReview";
+import { useEffect } from "react";
+import { useState } from "react";
+import UserReview from "./UserReview";
 
 const ServiceDetails = () => {
   const singleServiceData = useLoaderData();
   const { title, img, price, description, facility } = singleServiceData;
+  const [allreviews , setAllReviews] = useState([])
+  const [reviews , setReviews] = useState([]);
+console.log(allreviews)
+console.log("s")
+console.log(reviews)
+ useEffect(()=>{
+   fetch('http://localhost:5000/reviews')
+   .then(res=>res.json())
+   .then(data=>{
+    setAllReviews(data)
+    const singleServiceReview = data.filter(review => review.Title === title);
+  
+    setReviews(singleServiceReview )
+  })
+ },[allreviews , title])
+
+
+
   return (
     <div className="container mx-auto py-5">
       <div className="product_details flex gap-10">
@@ -93,9 +114,20 @@ const ServiceDetails = () => {
 
       <div className="container mx-auto py-10">
 
-        <h3 className="text-3xl text-center mb-10">See Customers Reviews</h3>
-        <Review/>
+        <h3 className="text-3xl text-center mb-10">Add Reviews</h3>
+        <Review title={title}/>
 
+                <h3 className=" pt-5 text-3xl text-center mb-10">{title} Reviews</h3>
+             
+        <div className=" pt-5 reviews_section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+           {
+            reviews.map((review)=>{
+              return(
+                <UserReview key={review._id} review={review}/>
+              )
+            })
+           }
+        </div>
       </div>
     </div>
   );

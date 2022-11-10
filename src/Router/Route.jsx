@@ -4,6 +4,7 @@ import Home from '../pages/Home/Home'
 import Login from '../pages/Login/Login';
 import ServiceDetails from '../pages/Services/ServiceDetails';
 import Services from '../pages/Services/Services';
+
 import Signup from '../pages/Singup/Signup';
 
 const router = createBrowserRouter([
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
                 loader:async()=>fetch("http://localhost:5000/services"),
                 element:<Services></Services>
             },
+         
             {
                 path:"/services/:id",
                 loader:async({params})=>fetch(`http://localhost:5000/services/${params.id}`),
