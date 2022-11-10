@@ -5,11 +5,33 @@ import { AuthContext } from '../../Context/Authprovider';
 
 const Login = () => {
 
-	const {providerLogin} = useContext(AuthContext)
+	const {providerLogin , userLogin} = useContext(AuthContext);
 
 
 	const provider = new GoogleAuthProvider();
 	const gitHubProvider = new GithubAuthProvider();
+
+	//login with email and password
+     const loginHandeler=(event)=>{
+		event.preventDefault();
+		const form = event.target;
+		const email = form.email.value;
+		const password = form.password.value;
+		const userInfo ={
+			email,
+			password
+		}
+		console.log(userInfo)
+		userLogin(email, password)
+		.then((result =>{
+			const user = result.user;
+			console.log(user);
+			form.reset()
+		}))
+		.catch(error => console.log(error))
+	 }
+
+	//end
 	//log in with social
 
 	  //sign up with google
@@ -40,19 +62,19 @@ const Login = () => {
         <div className='py-5'>
            <div className="w-3/4 mx-auto max-w-md p-8 space-y-3 rounded-xl  bg-gray-900  text-gray-100">
 	<h1 className="text-2xl font-bold text-center">Login</h1>
-	<form action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
+	<form action="" className="space-y-6 ng-untouched ng-pristine ng-valid" onSubmit={loginHandeler}>
 		<div className="space-y-1 text-sm">
 			<label htmlFor="username" className="block  text-gray-400">Username</label>
-			<input type="text" name="username" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md  border-gray-700  bg-gray-900  text-gray-100 focus: border-violet-400" />
+			<input type="email" name="email" id="username" placeholder="Enter your email" className="w-full px-4 py-3 rounded-md  border-gray-700  bg-gray-900  text-gray-100 focus: border-violet-400" />
 		</div>
 		<div className="space-y-1 text-sm">
 			<label htmlFor="password" className="block  text-gray-400">Password</label>
 			<input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md  border-gray-700  bg-gray-900  text-gray-100 focus: border-violet-400" />
 			<div className="flex justify-end text-xs  text-gray-400">
-				<a rel="noopener noreferrer" href=" /">Forgot Password?</a>
+				
 			</div>
 		</div>
-		<button className="block w-full p-3 text-center rounded-sm  text-gray-900  bg-violet-400">Sign in</button>
+		<button type="submit"className="block w-full p-3 text-center rounded-sm  text-gray-900  bg-violet-400">Sign in</button>
 	</form>
 	<div className="flex items-center pt-4 space-x-1">
 		<div className="flex-1 h-px sm:w-16  bg-gray-700"></div>

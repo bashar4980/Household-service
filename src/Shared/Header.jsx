@@ -2,8 +2,16 @@ import React from 'react';
 import {Navbar, Button} from "flowbite-react";
 import { Link } from 'react-router-dom';
 import './Shared.css'
+import { useContext } from 'react';
+import { AuthContext } from '../Context/Authprovider';
 
 const Header = () => {
+  const {logOut} = useContext(AuthContext);
+  const signOutuser =()=>{
+    logOut()
+    .then(()=> alert("Log Out succesfully"))
+    .catch(error => console.error(error))
+  }
     return (
         <Navbar  className=' border-b border-gray-200 dark:border-gray-600'
   fluid={false}
@@ -20,8 +28,8 @@ const Header = () => {
     </span>
   </Navbar.Brand>
   <div className="flex md:order-2">
-    <Button>
-      Get started
+    <Button onClick={signOutuser}>
+      Logout
     </Button>
     <Navbar.Toggle />
   </div>
