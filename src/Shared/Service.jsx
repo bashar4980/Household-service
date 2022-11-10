@@ -2,6 +2,7 @@ import React from 'react';
 import { Card } from 'flowbite-react';
 import './Shared.css'
 import { Link } from 'react-router-dom';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 const Service = ({service}) => {
     const {title , img , price , description, _id} = service
@@ -10,9 +11,12 @@ const Service = ({service}) => {
         <div id='service_card' className="max-w-sm">
         <Card
           imgAlt="Apple Watch Series 7 in colors pink, silver, and black"
-          imgSrc={img}
-        >
-         
+          
+        > <PhotoProvider>
+          <PhotoView src={img}>
+            <img src={img}  className="rounded"alt="" />
+          </PhotoView>
+          </PhotoProvider>
             <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
               {title}
             </h5>
