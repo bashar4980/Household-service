@@ -6,7 +6,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../Context/Authprovider';
 
 const Header = () => {
-  const {logOut} = useContext(AuthContext);
+  const {logOut , user} = useContext(AuthContext);
   const signOutuser =()=>{
     logOut()
     .then(()=> alert("Log Out succesfully"))
@@ -28,10 +28,19 @@ const Header = () => {
     </span>
   </Navbar.Brand>
   <div className="flex md:order-2">
-    <Button onClick={signOutuser}>
-      Logout
-    </Button>
-    <Navbar.Toggle />
+  
+    {
+      user?.uid ? <><img src={user.photoURL} alt="" className="object-cover w-12 h-12 rounded-full bg-gray-500 mr-2" title={user.displayName} />
+      <Navbar.Toggle />
+      <Button onClick={signOutuser}>
+        Logout
+      </Button></>
+      :
+      <>
+      <Link to="/signin" className='mr-2'>Login </Link>
+      <Link to="/signup">Register</Link>
+      </>
+    }
   </div>
   <Navbar.Collapse >
   <Link  to="/">Home</Link>
