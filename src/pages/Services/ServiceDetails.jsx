@@ -32,11 +32,11 @@ const ServiceDetails = () => {
         <meta charSet="utf-8" />
         <title>services-details</title>
       </Helmet>
-      <div className="product_details flex gap-10">
-        <div className="img w-1/2">
-          <img src={img} alt="service img" />
+      <div className="product_details mx-5 md:mx-center md:w-full sm:flex-row lg:flex gap-5 ">
+        <div className="img lg:w-4/6 mx-auto">
+          <img src={img} className="w-full " alt="service img" />
         </div>
-        <div className="content w-1/2 pt-10">
+        <div className="content  lg:w-2/6 pt-10 ">
           <h5 className="text-3xl font-semibold tracking-tight text-gray-900 dark:text-white">
             {title}
           </h5>
@@ -108,10 +108,10 @@ const ServiceDetails = () => {
           </button>
         </div>
       </div>
-      <>
+      <div className="mx-5 ">
         <h3 className="text-2xl py-5 font-semibold">Description:</h3>
         <h3 className="text-xl">{description}</h3>
-      </>
+      </div>
 
       {/* Review section is add */}
 

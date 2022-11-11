@@ -4,13 +4,16 @@ import { Link } from 'react-router-dom';
 import './Shared.css'
 import { useContext } from 'react';
 import { AuthContext } from '../Context/Authprovider';
+import toast from 'react-hot-toast';
 
 
 const Header = () => {
   const {logOut , user} = useContext(AuthContext);
   const signOutuser =()=>{
     logOut()
-    .then(()=> alert("Log Out succesfully"))
+    .then(()=>{
+      toast.success("Log out success")
+    })
     .catch(error => console.error(error))
   }
     return (
@@ -24,21 +27,23 @@ const Header = () => {
 
   </Navbar.Brand>
   <div className="flex md:order-2">
-  
-    {
+    
+  {
       user?.uid ? <><img src={user.photoURL} alt="" className="object-cover w-12 h-12 rounded-full bg-gray-500 mr-2" title={user.displayName} />
-      <Navbar.Toggle />
+    
       <Button onClick={signOutuser}>
         Logout
       </Button></>
       :
       <>
-      <Link to="/signin" className='mr-2'>Login </Link>
-      <Link to="/signup">Register</Link>
+      <Link to="/signin" className='mx-5 mt-2'>Login </Link>
+      <Link to="/signup" className='mt-2'>Register</Link>
       </>
     }
-  </div>
   <Navbar.Toggle />
+  
+  </div>
+  
   <Navbar.Collapse >
     
   <Link  to="/">Home</Link>
@@ -53,6 +58,9 @@ const Header = () => {
       </>
     
     }
+
+    
+
   </Navbar.Collapse>
 </Navbar>
     );

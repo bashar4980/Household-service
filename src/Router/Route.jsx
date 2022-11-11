@@ -9,6 +9,7 @@ import ServiceDetails from '../pages/Services/ServiceDetails';
 import Services from '../pages/Services/Services';
 
 import Signup from '../pages/Singup/Signup';
+import UpadteReview from '../UpdateReview/Update';
 import PrivateRoute from './Privateroute';
 
 const router = createBrowserRouter([
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
              path:'/blogs',
              element:<Blogs/>
             },
+            {
+                path:'/update/:id',
+                loader:async({params})=> fetch(`https://server-bashar4980.vercel.app/reviews/${params.id}`),
+                element:<UpadteReview/>
+               },
             {
                 path:"/signin",
                 element:<Login></Login>

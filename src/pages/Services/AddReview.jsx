@@ -1,5 +1,6 @@
 import React from "react";
 import { useContext } from "react";
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/Authprovider";
 
@@ -28,6 +29,7 @@ const Review = ({ title }) => {
     })
       .then((res) => res.json())
       .then((data) => {
+        toast.success("Review add successfully")
         form.reset();
       });
   };

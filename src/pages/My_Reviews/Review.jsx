@@ -1,5 +1,6 @@
 import React from "react";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 const Review = ({ review }) => {
   const { name, picture, message, Title, _id } = review;
@@ -58,7 +59,7 @@ const Review = ({ review }) => {
             type="button"
             className="px-6 ml-5 py-2 border rounded-md dark:bg-violet-400 text-gray-100  border-violet-700"
           >
-            Update
+           <Link to={`/update/${_id}`}>Update</Link>
           </button>
         </div>
       </div>

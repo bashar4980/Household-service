@@ -1,10 +1,11 @@
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import React, { useContext } from "react";
 import { AuthContext } from "../../Context/Authprovider";
-import {Helmet} from 'react-helmet';
+import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
-  const { providerLogin, createUser, updateUser } = useContext(AuthContext);
+  const { providerLogin, createUser, updateUser,loading} = useContext(AuthContext);
   const provider = new GoogleAuthProvider();
   const gitHubProvider = new GithubAuthProvider();
   //form handeler
@@ -61,12 +62,14 @@ const Signup = () => {
 
   return (
     <div className="container mx-auto py-10">
-       <Helmet>
-    <meta charSet="utf-8" />
-    <title>register</title>
-   
-</Helmet>
-      <div className="w-3/4 mx-auto max-w-md p-4 rounded-md shadow sm:p-8   bg-gray-900   text-gray-100">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>register</title>
+      </Helmet>
+      {
+        loading === true ? <>  <div className="w-16 h-16 border-4 container mx-auto border-dashed rounded-full animate-spin border-violet-700"></div></>
+        :
+        <div className="w-3/4 mx-auto max-w-md p-4 rounded-md shadow sm:p-8   bg-gray-900   text-gray-100">
         <h2 className="mb-3 text-3xl font-semibold text-center">Register</h2>
 
         <div className="flex items-center pt-4 space-x-1">
@@ -178,18 +181,12 @@ const Signup = () => {
             Register
           </button>
           <p className="text-sm text-center   text-gray-400">
-            Already have account
-            <a
-              href=" /"
-              rel="noopener noreferrer"
-              className="focus:underline hover:underline"
-            >
-              {" "}
-              Signin
-            </a>
+            Already have account 
+            <Link to="/signin">Signin</Link>
           </p>
         </form>
       </div>
+      }
     </div>
   );
 };
