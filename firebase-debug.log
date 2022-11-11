@@ -1,0 +1,118 @@
+[debug] [2022-11-11T17:16:10.871Z] ----------------------------------------------------------------------
+[debug] [2022-11-11T17:16:10.875Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Bashar Ahmed\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-11-11T17:16:10.876Z] CLI Version:   11.15.0
+[debug] [2022-11-11T17:16:10.877Z] Platform:      win32
+[debug] [2022-11-11T17:16:10.877Z] Node Version:  v18.9.1
+[debug] [2022-11-11T17:16:10.890Z] Time:          Fri Nov 11 2022 23:16:10 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-11-11T17:16:10.891Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-11T17:16:10.898Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-11-11T17:16:11.273Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-11T17:16:11.277Z] > authorizing via signed-in user (bashar.ahmed4980@gmail.com)
+[debug] [2022-11-11T17:16:11.277Z] [iam] checking project household-servicce for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-11T17:16:11.280Z] > refreshing access token with scopes: []
+[debug] [2022-11-11T17:16:11.282Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-11-11T17:16:11.283Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-11T17:16:11.758Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-11-11T17:16:11.758Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-11T17:16:11.785Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/household-servicce:testIamPermissions [none]
+[debug] [2022-11-11T17:16:11.785Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/household-servicce:testIamPermissions x-goog-quota-user=projects/household-servicce
+[debug] [2022-11-11T17:16:11.785Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/household-servicce:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-11T17:16:12.107Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-11-11T17:16:12.107Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-11-11T17:16:13.412Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/household-servicce:testIamPermissions 200
+[debug] [2022-11-11T17:16:13.412Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/household-servicce:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-11T17:16:13.413Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/household-servicce [none]
+[debug] [2022-11-11T17:16:14.120Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/household-servicce 200
+[debug] [2022-11-11T17:16:14.120Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/household-servicce {"projectId":"household-servicce","projectNumber":"340925222674","displayName":"Household servicce","name":"projects/household-servicce","resources":{"hostingSite":"household-servicce"},"state":"ACTIVE","etag":"1_ff23a547-0f2e-426f-87e9-8b9da594127d"}
+[info] 
+[info] === Deploying to 'household-servicce'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-11-11T17:16:14.128Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/household-servicce/versions [none]
+[debug] [2022-11-11T17:16:14.129Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/household-servicce/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-11-11T17:16:15.516Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/household-servicce/versions 200
+[debug] [2022-11-11T17:16:15.516Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/household-servicce/versions {"name":"projects/340925222674/sites/household-servicce/versions/0ba6c0a2dce4e83a","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[household-servicce]: beginning deploy... 
+[info] i  hosting[household-servicce]: found 15 files in build 
+[debug] [2022-11-11T17:16:15.547Z] [hosting] uploading with 200 concurrency
+[debug] [2022-11-11T17:16:16.244Z] [hosting] hash cache [YnVpbGQ] stored for 15 files
+[debug] [2022-11-11T17:16:16.245Z] [hosting][hash queue][FINAL] {"max":628,"min":3,"avg":86.46666666666667,"active":0,"complete":15,"success":15,"errored":0,"retried":0,"total":15,"elapsed":649}
+[debug] [2022-11-11T17:16:16.246Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/340925222674/sites/household-servicce/versions/0ba6c0a2dce4e83a:populateFiles [none]
+[debug] [2022-11-11T17:16:16.246Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/340925222674/sites/household-servicce/versions/0ba6c0a2dce4e83a:populateFiles {"files":{"/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/images.png":"e67ea45efcf59885e8cd0c60183c1265f3a98fbf337541483aa1f2d6b4b83762","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/asset-manifest.json":"d7e59eb7b4b8bd28e296f982eddf65f90e5316c19858da0687814f81f2d00b6f","/index.html":"ef9d4ecc96c64b09940e9c38d2c058e9c52e918b134b23f11945c12cc470e216","/static/css/main.d9e029a4.css.map":"992079b4fc28efdd1299e46baf3b124bde916bd1e4d98d914167962e74843c5f","/static/js/787.c4e7f8f9.chunk.js":"91c272bf68adff064c800f366f30728320d116b78ce6c85e37780678453e9a15","/static/js/787.c4e7f8f9.chunk.js.map":"033fe9275438718e0730acfbe04a0b09fd74cccd39b244c78f4a513c4ddd3a29","/static/js/main.2fd1c5f6.js.LICENSE.txt":"1d7d4726e0920a87e34bc96bb2fde00f1c86960f31f278e0a7010c0a8847aabc","/static/css/main.d9e029a4.css":"2604d3e5ab029971f35954a81a42f866f5ed1232f666d7b7e7a80097a545fc34","/static/js/main.2fd1c5f6.js":"8032334427a2317c9dab0f555cdc9210ceb73b13cca03a28fa8408716826752b","/static/js/main.2fd1c5f6.js.map":"dc14ddcd934009f846c6a9e334031697ec6f1b25fda73dc21762c8d84cb3b87b"}}
+[debug] [2022-11-11T17:16:17.332Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/340925222674/sites/household-servicce/versions/0ba6c0a2dce4e83a:populateFiles 200
+[debug] [2022-11-11T17:16:17.332Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/340925222674/sites/household-servicce/versions/0ba6c0a2dce4e83a:populateFiles {"uploadRequiredHashes":["dc14ddcd934009f846c6a9e334031697ec6f1b25fda73dc21762c8d84cb3b87b","d7e59eb7b4b8bd28e296f982eddf65f90e5316c19858da0687814f81f2d00b6f","992079b4fc28efdd1299e46baf3b124bde916bd1e4d98d914167962e74843c5f","8032334427a2317c9dab0f555cdc9210ceb73b13cca03a28fa8408716826752b","ef9d4ecc96c64b09940e9c38d2c058e9c52e918b134b23f11945c12cc470e216","2604d3e5ab029971f35954a81a42f866f5ed1232f666d7b7e7a80097a545fc34"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files"}
+[debug] [2022-11-11T17:16:17.335Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/dc14ddcd934009f846c6a9e334031697ec6f1b25fda73dc21762c8d84cb3b87b [none]
+[debug] [2022-11-11T17:16:17.335Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/dc14ddcd934009f846c6a9e334031697ec6f1b25fda73dc21762c8d84cb3b87b [stream]
+[debug] [2022-11-11T17:16:17.337Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/d7e59eb7b4b8bd28e296f982eddf65f90e5316c19858da0687814f81f2d00b6f [none]
+[debug] [2022-11-11T17:16:17.337Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/d7e59eb7b4b8bd28e296f982eddf65f90e5316c19858da0687814f81f2d00b6f [stream]
+[debug] [2022-11-11T17:16:17.339Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/992079b4fc28efdd1299e46baf3b124bde916bd1e4d98d914167962e74843c5f [none]
+[debug] [2022-11-11T17:16:17.339Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/992079b4fc28efdd1299e46baf3b124bde916bd1e4d98d914167962e74843c5f [stream]
+[debug] [2022-11-11T17:16:17.341Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/8032334427a2317c9dab0f555cdc9210ceb73b13cca03a28fa8408716826752b [none]
+[debug] [2022-11-11T17:16:17.341Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/8032334427a2317c9dab0f555cdc9210ceb73b13cca03a28fa8408716826752b [stream]
+[debug] [2022-11-11T17:16:17.345Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/ef9d4ecc96c64b09940e9c38d2c058e9c52e918b134b23f11945c12cc470e216 [none]
+[debug] [2022-11-11T17:16:17.345Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/ef9d4ecc96c64b09940e9c38d2c058e9c52e918b134b23f11945c12cc470e216 [stream]
+[debug] [2022-11-11T17:16:17.347Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/2604d3e5ab029971f35954a81a42f866f5ed1232f666d7b7e7a80097a545fc34 [none]
+[debug] [2022-11-11T17:16:17.347Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/2604d3e5ab029971f35954a81a42f866f5ed1232f666d7b7e7a80097a545fc34 [stream]
+[debug] [2022-11-11T17:16:17.349Z] [hosting][populate queue][FINAL] {"max":1104,"min":1104,"avg":1104,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1118}
+[debug] [2022-11-11T17:16:17.349Z] [hosting] uploads queued: 6
+[debug] [2022-11-11T17:16:19.139Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/d7e59eb7b4b8bd28e296f982eddf65f90e5316c19858da0687814f81f2d00b6f 200
+[debug] [2022-11-11T17:16:19.139Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/d7e59eb7b4b8bd28e296f982eddf65f90e5316c19858da0687814f81f2d00b6f [stream]
+[debug] [2022-11-11T17:16:19.148Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/2604d3e5ab029971f35954a81a42f866f5ed1232f666d7b7e7a80097a545fc34 200
+[debug] [2022-11-11T17:16:19.149Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/2604d3e5ab029971f35954a81a42f866f5ed1232f666d7b7e7a80097a545fc34 [stream]
+[debug] [2022-11-11T17:16:19.786Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/dc14ddcd934009f846c6a9e334031697ec6f1b25fda73dc21762c8d84cb3b87b 200
+[debug] [2022-11-11T17:16:19.787Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/dc14ddcd934009f846c6a9e334031697ec6f1b25fda73dc21762c8d84cb3b87b [stream]
+[debug] [2022-11-11T17:16:20.010Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/992079b4fc28efdd1299e46baf3b124bde916bd1e4d98d914167962e74843c5f 200
+[debug] [2022-11-11T17:16:20.011Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/992079b4fc28efdd1299e46baf3b124bde916bd1e4d98d914167962e74843c5f [stream]
+[debug] [2022-11-11T17:16:20.423Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/ef9d4ecc96c64b09940e9c38d2c058e9c52e918b134b23f11945c12cc470e216 200
+[debug] [2022-11-11T17:16:20.424Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/ef9d4ecc96c64b09940e9c38d2c058e9c52e918b134b23f11945c12cc470e216 [stream]
+[debug] [2022-11-11T17:16:20.869Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/8032334427a2317c9dab0f555cdc9210ceb73b13cca03a28fa8408716826752b 200
+[debug] [2022-11-11T17:16:20.869Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/household-servicce/versions/0ba6c0a2dce4e83a/files/8032334427a2317c9dab0f555cdc9210ceb73b13cca03a28fa8408716826752b [stream]
+[debug] [2022-11-11T17:16:20.870Z] [hosting][upload queue][FINAL] {"max":3534,"min":1806,"avg":2562.5,"active":0,"complete":6,"success":6,"errored":0,"retried":0,"total":6,"elapsed":3538}
+[info] +  hosting[household-servicce]: file upload complete 
+[debug] [2022-11-11T17:16:20.871Z] [hosting] deploy completed after 5353ms
+[debug] [2022-11-11T17:16:20.877Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "household-servicce"
+    },
+    "version": "projects/340925222674/sites/household-servicce/versions/0ba6c0a2dce4e83a"
+  }
+]
+[info] i  hosting[household-servicce]: finalizing version... 
+[debug] [2022-11-11T17:16:20.882Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/household-servicce/versions/0ba6c0a2dce4e83a updateMask=status%2Cconfig
+[debug] [2022-11-11T17:16:20.882Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/household-servicce/versions/0ba6c0a2dce4e83a {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2022-11-11T17:16:21.975Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/household-servicce/versions/0ba6c0a2dce4e83a 200
+[debug] [2022-11-11T17:16:21.975Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/household-servicce/versions/0ba6c0a2dce4e83a {"name":"projects/340925222674/sites/household-servicce/versions/0ba6c0a2dce4e83a","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-11-11T17:16:15.785483Z","createUser":{"email":"bashar.ahmed4980@gmail.com"},"finalizeTime":"2022-11-11T17:16:22.520668Z","finalizeUser":{"email":"bashar.ahmed4980@gmail.com"}}
+[debug] [2022-11-11T17:16:21.976Z] [hosting] finalized version for household-servicce:[object Object]
+[info] +  hosting[household-servicce]: version finalized 
+[info] i  hosting[household-servicce]: releasing new version... 
+[debug] [2022-11-11T17:16:21.978Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/household-servicce/channels/live/releases versionName=projects%2F340925222674%2Fsites%2Fhousehold-servicce%2Fversions%2F0ba6c0a2dce4e83a
+[debug] [2022-11-11T17:16:21.978Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/household-servicce/channels/live/releases {}
+[debug] [2022-11-11T17:16:22.993Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/household-servicce/channels/live/releases 200
+[debug] [2022-11-11T17:16:22.993Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/household-servicce/channels/live/releases {"name":"projects/340925222674/sites/household-servicce/channels/live/releases/1668186982973203","version":{"name":"projects/340925222674/sites/household-servicce/versions/0ba6c0a2dce4e83a","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-11-11T17:16:15.785483Z","createUser":{"email":"bashar.ahmed4980@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu2DtKkup28Zxn25C-fgxdsqdiChFpRINaK-AjnG=mo"},"finalizeTime":"2022-11-11T17:16:22.520668Z","finalizeUser":{"email":"bashar.ahmed4980@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu2DtKkup28Zxn25C-fgxdsqdiChFpRINaK-AjnG=mo"}},"type":"DEPLOY","releaseTime":"2022-11-11T17:16:22.973203563Z","releaseUser":{"email":"bashar.ahmed4980@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu2DtKkup28Zxn25C-fgxdsqdiChFpRINaK-AjnG=mo"}}
+[debug] [2022-11-11T17:16:22.993Z] [hosting] release: {"name":"projects/340925222674/sites/household-servicce/channels/live/releases/1668186982973203","version":{"name":"projects/340925222674/sites/household-servicce/versions/0ba6c0a2dce4e83a","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-11-11T17:16:15.785483Z","createUser":{"email":"bashar.ahmed4980@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu2DtKkup28Zxn25C-fgxdsqdiChFpRINaK-AjnG=mo"},"finalizeTime":"2022-11-11T17:16:22.520668Z","finalizeUser":{"email":"bashar.ahmed4980@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu2DtKkup28Zxn25C-fgxdsqdiChFpRINaK-AjnG=mo"}},"type":"DEPLOY","releaseTime":"2022-11-11T17:16:22.973203563Z","releaseUser":{"email":"bashar.ahmed4980@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu2DtKkup28Zxn25C-fgxdsqdiChFpRINaK-AjnG=mo"}}
+[info] +  hosting[household-servicce]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/household-servicce/overview
+[info] Hosting URL: https://household-servicce.web.app
+[debug] [2022-11-11T17:16:28.563Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Bashar Ahmed\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.

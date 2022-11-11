@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Context/Authprovider";
+import { Helmet } from "react-helmet";
 
 import Review from "./Review";
 
@@ -22,6 +23,11 @@ const Myreviews = () => {
 
   return (
     <div>
+      <Helmet>
+    <meta charSet="utf-8" />
+    <title>myreviews</title>
+   
+</Helmet>
       <div className="container mx-auto py-10 reviews_section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {myreviews.length === 0 ? (
           <h2 className="text-3xl col-start-1 col-end-4 text-center text-bold">
