@@ -1,11 +1,17 @@
 import React from "react";
+import {Helmet} from 'react-helmet'
 
 const Blogs = () => {
   return (
     <>
+     <Helmet>
+    <meta charSet="utf-8" />
+    <title>blogs</title>
+   
+</Helmet>
         <h3 className="text-3xl text-center pt-5">Blog Contents</h3>
-        <div className="container py-10 mx-auto grid grid-cols-3 md:grid-cols-2 lg:grid-cols-2 gap-4">
-      <div className=" p-6 overflow-hidden rounded-lg shadow bg-gray-900 text-gray-100">
+        <div className="container w-11/12 py-10 mx-auto grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="mx-auto p-6 overflow-hidden rounded-lg shadow bg-gray-900 text-gray-100">
         <article>
           <h2 className="text-xl font-bold">
             Difference between SQL and NoSQL?

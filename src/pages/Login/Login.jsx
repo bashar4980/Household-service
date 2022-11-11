@@ -1,6 +1,7 @@
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import React, { useContext } from "react";
 import { AuthContext } from "../../Context/Authprovider";
+import {Helmet} from 'react-helmet';
 
 const Login = () => {
   const { providerLogin, userLogin } = useContext(AuthContext);
@@ -53,6 +54,11 @@ const Login = () => {
   //
   return (
     <div className="py-5">
+       <Helmet>
+    <meta charSet="utf-8" />
+    <title>login</title>
+   
+</Helmet>
       <div className="w-3/4 mx-auto max-w-md p-8 space-y-3 rounded-xl  bg-gray-900  text-gray-100">
         <h1 className="text-2xl font-bold text-center">Login</h1>
         <form

@@ -21,7 +21,7 @@ const Review = ({ title }) => {
       Title,
       email,
     };
-    fetch("http://localhost:5000/services/reviews", {
+    fetch("https://server-bashar4980.vercel.app/services/reviews", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userReview),

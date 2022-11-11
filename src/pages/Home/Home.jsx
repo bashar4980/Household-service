@@ -3,17 +3,23 @@ import { useLoaderData } from 'react-router-dom';
 import Service from '../../Shared/Service';
 import Hero from './Hero';
 import { Link } from 'react-router-dom';
+import {Helmet} from "react-helmet";
 
 
 const Home = () => {
     const serviceData = useLoaderData();
     return (
         <div>
+             <Helmet>
+    <meta charSet="utf-8" />
+    <title>home</title>
+   
+</Helmet>
             <Hero></Hero>
             <h3 className='text-center py-10 text-3xl'>My Services</h3>
            
 			
-            <div id="service" className='container mx-auto grid grid-cols-3 gap-8 pb-10'>
+            <div id="service" className='container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-10'>
     
                     {
                         serviceData.map(service =>{

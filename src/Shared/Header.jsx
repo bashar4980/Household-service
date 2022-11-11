@@ -5,6 +5,7 @@ import './Shared.css'
 import { useContext } from 'react';
 import { AuthContext } from '../Context/Authprovider';
 
+
 const Header = () => {
   const {logOut , user} = useContext(AuthContext);
   const signOutuser =()=>{
@@ -17,15 +18,10 @@ const Header = () => {
   fluid={false}
   rounded={true}
 >
-  <Navbar.Brand href="https://flowbite.com/">
-    <img
-      src="https://flowbite.com/docs/images/logo.svg"
-      className="mr-3 h-6 sm:h-9"
-      alt="Flowbite Logo"
-    />
-    <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-      Flowbite
-    </span>
+  <Navbar.Brand >
+    
+     <h1 className='text-2xl text-bold hover:text-blue-700'>Household</h1>
+
   </Navbar.Brand>
   <div className="flex md:order-2">
   
@@ -42,11 +38,11 @@ const Header = () => {
       </>
     }
   </div>
+  <Navbar.Toggle />
   <Navbar.Collapse >
+    
   <Link  to="/">Home</Link>
-    <Navbar.Link href="/navbars">
-      About
-    </Navbar.Link>
+    
    <Link to="/services">Services</Link>
    <Link to="/blogs">Blogs</Link>
     

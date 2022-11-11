@@ -2,20 +2,18 @@ import React from "react";
 import toast from "react-hot-toast";
 
 const Review = ({ review }) => {
+  const { name, picture, message, Title, _id } = review;
 
-  const { name, picture, message, Title , _id} = review;
-
-  const reviewDelete = id =>{
-    
-     fetch(`http://localhost:5000/reviews/${id}`,{
-        method:"DELETE"
-     })
-     .then(res =>res.json())
-     .then(data => {
-        toast.success("Review Deleted Successfully")
-        console.log(data)
+  const reviewDelete = (id) => {
+    fetch(`https://server-bashar4980.vercel.app/reviews/${id}`, {
+      method: "DELETE",
     })
-  }
+      .then((res) => res.json())
+      .then((data) => {
+        toast.success("Review Deleted Successfully");
+        console.log(data);
+      });
+  };
 
   return (
     <>
@@ -48,15 +46,21 @@ const Review = ({ review }) => {
         <div className="p-4 space-y-2 text-sm text-gray-400">
           <p className="text-2xl text-bold">Service Name: {Title}</p>
           <p className="text-xl">{message}</p>
-         
-          <button onClick={()=>reviewDelete(_id)} type="button" className="px-6 py-2 border rounded-md dark:bg-violet-400 text-gray-100  border-violet-700">
-		  Delete
-		</button>
-        <button type="button" className="px-6 ml-5 py-2 border rounded-md dark:bg-violet-400 text-gray-100  border-violet-700">
-		  Update
-		</button>
+
+          <button
+            onClick={() => reviewDelete(_id)}
+            type="button"
+            className="px-6 py-2 border rounded-md dark:bg-violet-400 text-gray-100  border-violet-700"
+          >
+            Delete
+          </button>
+          <button
+            type="button"
+            className="px-6 ml-5 py-2 border rounded-md dark:bg-violet-400 text-gray-100  border-violet-700"
+          >
+            Update
+          </button>
         </div>
-        
       </div>
     </>
   );

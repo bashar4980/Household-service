@@ -18,18 +18,18 @@ const router = createBrowserRouter([
         children:[
             {
                 path:"/",
-                loader:async()=>fetch("http://localhost:5000/services"),
+                loader:async()=>fetch("https://server-bashar4980.vercel.app/services"),
                 element:<Home></Home>
             } ,
             {
                 path:"/services",
-                loader:async()=>fetch("http://localhost:5000/services"),
+                loader:async()=>fetch("https://server-bashar4980.vercel.app/allservices"),
                 element:<Services></Services>
             },
          
             {
                 path:"/services/:id",
-                loader:async({params})=>fetch(`http://localhost:5000/services/${params.id}`),
+                loader:async({params})=>fetch(`https://server-bashar4980.vercel.app/services/${params.id}`),
                 element:<ServiceDetails></ServiceDetails>
             },
             {

@@ -2,47 +2,46 @@ import React from "react";
 import toast from "react-hot-toast";
 
 const AddService = () => {
-  
   const addproductHandeler = (event) => {
     event.preventDefault();
     const facility = [
-        {
-            "name": "Instant Services"
-            },
-            {
-                "name": "24/7 Quality Service"
-                },
-                {
-                    "name": "Easy Customer Service"
-                    },
-                    {
-                        "name": "Quality Cost Service"
-                        }
-    ]
+      {
+        name: "Instant Services",
+      },
+      {
+        name: "24/7 Quality Service",
+      },
+      {
+        name: "Easy Customer Service",
+      },
+      {
+        name: "Quality Cost Service",
+      },
+    ];
     const form = event.target;
     const title = form.service.value;
     const img = form.img.value;
     const price = form.price.value;
     const description = form.message.value;
- 
+
     const serviceInfo = {
       title,
       img,
       price,
       description,
-      facility
+      facility,
     };
     console.log(serviceInfo);
-    fetch('http://localhost:5000/services',{
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(serviceInfo)
-        })
-        .then(res=>res.json())
-        .then(data=> {
-          toast.success("Service added Successfully")
-          form.reset();
-        })
+    fetch("https://server-bashar4980.vercel.app/services", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(serviceInfo),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        toast.success("Service added Successfully");
+        form.reset();
+      });
   };
   return (
     <div className="container my-10 w-3/4 mx-auto max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100">
@@ -61,7 +60,8 @@ const AddService = () => {
             id="username"
             placeholder="Service name"
             className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400"
-          required />
+            required
+          />
         </div>
         <div className="space-y-1 text-sm">
           <label for="picture" className="block text-gray-400">
@@ -73,7 +73,8 @@ const AddService = () => {
             id="picture"
             placeholder="Enter service photo"
             className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400"
-          required />
+            required
+          />
         </div>
 
         <div className="space-y-1 text-sm">
@@ -86,7 +87,8 @@ const AddService = () => {
             id="price"
             placeholder="Enter service price"
             className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400"
-          required />
+            required
+          />
         </div>
         <textarea
           name="message"

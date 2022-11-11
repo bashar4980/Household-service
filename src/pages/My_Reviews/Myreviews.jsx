@@ -1,7 +1,4 @@
-import React from "react";
-import { useContext } from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Context/Authprovider";
 
 import Review from "./Review";
@@ -12,7 +9,7 @@ const Myreviews = () => {
   const [myreviews, setMyreviews] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/reviews")
+    fetch("https://server-bashar4980.vercel.app/reviews")
       .then((res) => res.json())
       .then((data) => {
         setAllreviews(data);

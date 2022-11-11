@@ -1,8 +1,7 @@
 import React from "react";
 
-
-const UserReview = ({review}) => {
-    const {name, picture , message}=review;
+const UserReview = ({ review }) => {
+  const { name, picture, message } = review;
 
   return (
     <>
@@ -33,10 +32,7 @@ const UserReview = ({review}) => {
           </div>
         </div>
         <div className="p-4 space-y-2 text-sm text-gray-400">
-          <p className="text-2xl">
-            {message}
-          </p>
-         
+          <p className="text-2xl">{message}</p>
         </div>
       </div>
     </>

@@ -8,7 +8,7 @@ const Service = ({service}) => {
     const {title , img , price , description, _id} = service
     // console.log(service._id)
     return (
-        <div id='service_card' className="max-w-sm">
+        <div id='service_card' className="">
         <Card
           imgAlt="Apple Watch Series 7 in colors pink, silver, and black"
           
