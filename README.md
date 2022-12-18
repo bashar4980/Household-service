@@ -1,7 +1,7 @@
 # Website Name & LinK
 ### Name: Household service
-### Client Side: [https://github.com/Porgramming-Hero-web-course/b6a11-service-review-client-side-bashar4980.git]
-### Server Side: [https://github.com/Porgramming-Hero-web-course/b6a11-service-review-server-side-bashar4980.git]
+### Client Side: [https://github.com/bashar4980/Household-service.git]
+### Server Side: [https://github.com/bashar4980/House-Hold-server.git]
 ### Live : [https://household-servicce.web.app/]
 
 
